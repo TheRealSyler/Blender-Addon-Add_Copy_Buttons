@@ -13,8 +13,8 @@ bl_info = {
 
 def menu_func(self, context):
     if bpy.context.mode == 'POSE':
-        #layout = self.layout
         row = self.layout.row(align=True)
+        row.separator()
         row.operator("pose.copy", text="", icon='COPYDOWN')
         row.operator("pose.paste", text="", icon='PASTEDOWN').flipped = False
         row.operator("pose.paste", text="", icon='PASTEFLIPDOWN').flipped = True
